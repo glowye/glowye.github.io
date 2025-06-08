@@ -1,0 +1,107 @@
+/* 淡入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 滑入动画 */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* 缩放动画 */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 应用动画到元素 */
+.profile-card {
+    animation: scaleIn 0.6s ease-out;
+}
+
+.nav-links a {
+    animation: fadeIn 0.4s ease-out backwards;
+}
+
+.nav-links a:nth-child(1) { animation-delay: 0.1s; }
+.nav-links a:nth-child(2) { animation-delay: 0.2s; }
+.nav-links a:nth-child(3) { animation-delay: 0.3s; }
+.nav-links a:nth-child(4) { animation-delay: 0.4s; }
+.nav-links a:nth-child(5) { animation-delay: 0.5s; }
+
+.carousel-slide {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.portfolio-grid > * {
+    animation: scaleIn 0.5s ease-out backwards;
+}
+
+/* 消息动画 */
+.message {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* 按钮悬停效果 */
+.button-hover {
+    transition: transform 0.2s ease;
+}
+
+.button-hover:hover {
+    transform: translateY(-2px);
+}
+
+/* 加载动画 */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* 页面过渡效果 */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 社交图标悬停效果 */
+.social-links a {
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+} 

@@ -1,0 +1,11 @@
+{
+  "name": "ye-personal-website",
+  "version": "1.0.0",
+  "description": "Ye的个人网站",
+  "scripts": {
+    "start": "http-server -S -C cert.pem -K key.pem -p 8080"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+} 
