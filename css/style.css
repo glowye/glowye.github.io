@@ -61,12 +61,24 @@ body {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-item > a i {
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
 }
 
 .nav-item:hover > a {
     color: var(--primary-color);
+}
+
+.nav-item.has-submenu:hover > a i {
+    transform: rotate(-180deg);
 }
 
 .submenu {
@@ -81,9 +93,10 @@ body {
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s ease;
+    z-index: 1000;
 }
 
-.nav-item:hover .submenu {
+.nav-item.has-submenu:hover .submenu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
