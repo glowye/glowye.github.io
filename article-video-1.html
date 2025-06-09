@@ -6,6 +6,86 @@
     <title>AI视频营销完全指南 - Ye</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 文章页面特定样式 */
+        .article-container {
+            max-width: 800px;
+            margin: 80px auto 50px;
+            padding: 0 20px;
+        }
+        .article-meta {
+            margin: 20px 0;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .article-meta span {
+            margin-right: 20px;
+        }
+        .article-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        .article-content h1 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            color: #333;
+        }
+        .article-content h2 {
+            font-size: 1.5em;
+            margin: 1.5em 0 0.8em;
+            color: #444;
+        }
+        .article-content p {
+            margin-bottom: 1.2em;
+            color: #333;
+        }
+        .article-content ul {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+        .article-content li {
+            margin-bottom: 0.5em;
+            color: #333;
+        }
+        /* 右侧目录样式 */
+        .article-sidebar {
+            position: fixed;
+            right: 20px;
+            top: 100px;
+            width: 250px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .article-sidebar h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .article-sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .article-sidebar li {
+            margin-bottom: 10px;
+        }
+        .article-sidebar a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+        .article-sidebar a:hover {
+            color: var(--primary-color);
+        }
+        @media (max-width: 1200px) {
+            .article-sidebar {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- 导航栏 -->
@@ -51,37 +131,44 @@
     </nav>
 
     <!-- 文章内容 -->
-    <main class="article-container">
+    <div class="article-container">
         <article class="article-content">
-            <header class="article-header">
-                <h1 class="article-title">AI视频营销完全指南</h1>
-                <div class="article-meta">
-                    <span class="article-date">2024-02-20</span>
-                    <span class="article-category">Video Marketing</span>
-                </div>
-            </header>
-
-            <div class="article-body">
-                <img src="images/articles/video/ai-video-1.jpg" alt="AI Video Marketing" class="article-featured-image">
-                
-                <h2>引言</h2>
-                <p>在当今数字营销时代，视频内容已经成为最具影响力的营销形式之一。随着人工智能技术的快速发展，AI在视频营销中的应用也变得越来越广泛。本文将为您详细介绍如何利用AI技术提升视频营销效果。</p>
-
-                <h2>AI视频营销的优势</h2>
-                <ul>
-                    <li>提高内容创作效率</li>
-                    <li>个性化内容推送</li>
-                    <li>智能数据分析</li>
-                    <li>自动化工作流程</li>
-                </ul>
-
-                <h2>常用AI视频工具</h2>
-                <p>这里是您的飞书文档内容...</p>
-
-                <!-- 更多文章内容 -->
+            <h1>AI视频营销完全指南</h1>
+            <div class="article-meta">
+                <span><i class="far fa-calendar"></i> 2024-02-20</span>
+                <span><i class="fas fa-tag"></i> Video Marketing</span>
             </div>
+            
+            <p>本篇笔记专为首次开启AI视频营销旅程的你准备，一文帮你梳理AI视频营销的全流程，看完后你可以做到2件事：</p>
+            <ol>
+                <li>掌握一个稳定的AI视频制作流程</li>
+                <li>建立自己的视频营销体系</li>
+            </ol>
+
+            <h2>AI视频营销的优势</h2>
+            <ul>
+                <li>提高内容创作效率</li>
+                <li>个性化内容推送</li>
+                <li>智能数据分析</li>
+                <li>自动化工作流程</li>
+            </ul>
+
+            <h2>常用AI视频工具</h2>
+            <p>这里是您的飞书文档内容...</p>
         </article>
-    </main>
+
+        <!-- 右侧目录 -->
+        <aside class="article-sidebar">
+            <h3>视频教程</h3>
+            <ul>
+                <li><a href="#intro">0. 准备工作</a></li>
+                <li><a href="#advantages">1. 视频营销优势</a></li>
+                <li><a href="#tools">2. 常用工具</a></li>
+                <li><a href="#workflow">3. 工作流程</a></li>
+                <li><a href="#cases">4. 实战案例</a></li>
+            </ul>
+        </aside>
+    </div>
 
     <footer>
         <p>&copy; 2024 Your Name. All rights reserved.</p>
