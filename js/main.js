@@ -91,21 +91,34 @@ window.addEventListener('load', () => {
 
 // 导航栏功能
 document.addEventListener('DOMContentLoaded', function() {
-    // 处理导航菜单点击
-    const navItems = document.querySelectorAll('.nav-item.has-submenu');
-    
-    navItems.forEach(item => {
-        const link = item.querySelector('a');
-        const submenu = item.querySelector('.submenu');
-        
-        // 鼠标进入显示子菜单
-        item.addEventListener('mouseenter', () => {
-            submenu.style.display = 'block';
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const subMenuItems = document.querySelectorAll('.nav-item.has-submenu');
+
+    // 移动端菜单切换
+    navToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        this.classList.toggle('active');
+    });
+
+    // 移动端子菜单切换
+    subMenuItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                if (e.target.tagName === 'SPAN' || e.target.tagName === 'I') {
+                    e.preventDefault();
+                    this.classList.toggle('active');
+                }
+            }
         });
-        
-        // 鼠标离开隐藏子菜单
-        item.addEventListener('mouseleave', () => {
-            submenu.style.display = 'none';
-        });
+    });
+
+    // 点击外部关闭菜单
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav-links') && !e.target.closest('.nav-toggle')) {
+            navLinks.classList.remove('active');
+            navToggle.classList.remove('active');
+            subMenuItems.forEach(item => item.classList.remove('active'));
+        }
     });
 }); 
