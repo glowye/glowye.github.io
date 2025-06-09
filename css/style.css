@@ -90,7 +90,8 @@ body {
 .submenu {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
     background: white;
     min-width: 200px;
     padding: 0.5rem 0;
@@ -98,14 +99,13 @@ body {
     box-shadow: 0 4px 15px var(--shadow-color);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
     transition: all 0.3s ease;
 }
 
 .nav-item.has-submenu:hover .submenu {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
 }
 
 .submenu li {
@@ -361,15 +361,14 @@ footer {
 
     .submenu {
         position: static;
+        transform: none;
+        left: 0;
         box-shadow: none;
         padding-left: 1rem;
         display: none;
     }
 
     .nav-item.has-submenu.active .submenu {
-        display: block;
-        opacity: 1;
-        visibility: visible;
         transform: none;
     }
 
