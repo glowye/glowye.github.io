@@ -87,4 +87,25 @@ function renderPortfolio() {
 // 页面加载完成后初始化
 window.addEventListener('load', () => {
     renderPortfolio();
+});
+
+// 导航栏功能
+document.addEventListener('DOMContentLoaded', function() {
+    // 处理导航菜单点击
+    const navItems = document.querySelectorAll('.nav-item.has-submenu');
+    
+    navItems.forEach(item => {
+        const link = item.querySelector('a');
+        const submenu = item.querySelector('.submenu');
+        
+        // 鼠标进入显示子菜单
+        item.addEventListener('mouseenter', () => {
+            submenu.style.display = 'block';
+        });
+        
+        // 鼠标离开隐藏子菜单
+        item.addEventListener('mouseleave', () => {
+            submenu.style.display = 'none';
+        });
+    });
 }); 
